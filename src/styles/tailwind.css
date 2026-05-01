@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #3b6ef8;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #475569;
+  --accent: #e0e9ff;
+  --accent-foreground: #3b6ef8;
+  --muted: #f1f5f9;
+  --muted-foreground: #94a3b8;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #3b6ef8;
+  --radius: 10px;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --sidebar-bg: #0f172a;
+  --sidebar-text: #94a3b8;
+  --sidebar-active: #3b6ef8;
+  --confirmed: #16a34a;
+  --confirmed-bg: #dcfce7;
+  --pending: #d97706;
+  --pending-bg: #fef3c7;
+  --cancelled: #dc2626;
+  --cancelled-bg: #fee2e2;
+  --inprogress: #2563eb;
+  --inprogress-bg: #dbeafe;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .font-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .sidebar-bg {
+    background-color: var(--sidebar-bg);
+  }
+  .text-confirmed {
+    color: var(--confirmed);
+  }
+  .bg-confirmed {
+    background-color: var(--confirmed-bg);
+  }
+  .text-pending {
+    color: var(--pending);
+  }
+  .bg-pending {
+    background-color: var(--pending-bg);
+  }
+  .text-cancelled {
+    color: var(--cancelled);
+  }
+  .bg-cancelled {
+    background-color: var(--cancelled-bg);
+  }
+  .text-inprogress {
+    color: var(--inprogress);
+  }
+  .bg-inprogress {
+    background-color: var(--inprogress-bg);
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #e2e8f0 transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 2px;
+  }
+}
